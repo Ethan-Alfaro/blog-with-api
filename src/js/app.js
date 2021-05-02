@@ -72,17 +72,6 @@ $.get("http://localhost:3000/posts", function succes(data) {
           $(".btn-close").one("click", function () {
             $(".modal-comments").children().remove();
           });
-          //Aqui falta funcion delete
-          $("#deletebtn").on("click", function () {
-            $.ajax({
-              url: "http://localhost:3000/posts",
-              método: "DELETE",
-            })
-              .then(function (data) {})
-              .catch(function (err) {
-                console.log("Algo salio mal, ....");
-              });
-          });
         }
       );
     });
